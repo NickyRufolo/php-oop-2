@@ -23,4 +23,16 @@ class Accessori extends Prodotto
         $this->dimensioni = $dimensioni;
         parent::__construct($name, $immagine, $category, $prezzo);
     }
+    public function displayProjectCard()
+    {
+        echo '<div class="card" style="width: 18rem;">
+        <img src="' . $this->immagine . '" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">' . $this->name . '</h5>
+        <li>' . $this->prezzo . '</li>
+        <li>' . $this->materiale . '</li>
+        <li>' . $this->dimensioni . '</li>
+        </div>
+        </div>';
+    }
 }

@@ -23,4 +23,16 @@ class Cibo extends Prodotto
         $this->ingredienti = $ingredienti;
         parent::__construct($name, $immagine, $category, $prezzo);
     }
+    public function displayProjectCard()
+    {
+        echo '<div class="card" style="width: 18rem;">
+        <img src="' . $this->immagine . '" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">' . $this->name . '</h5>
+        <li>' . $this->prezzo . '</li>
+        <li>' . $this->peso . '</li>
+        <li>' . $this->ingredienti . '</li>
+        </div>
+        </div>';
+    }
 }
